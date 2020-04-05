@@ -14,7 +14,6 @@ bool check(int x,int y){
   for(int i=0;i<store[x].size();i++) if(store[x][i]==store[y][i]) return false;
   return true;
 }
-int mat[5][5];
 
 void recurr(vector<int> v,std::vector<int> v1,int idx){
 
