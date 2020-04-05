@@ -5,7 +5,6 @@
 #include <set>
 #include <utility>
 #define rep(i,x,n) for(int i=x;i<n;i++)
-// #include <boost/functional/hash.hpp>
 using namespace std;
 
 vector<vector<int>> store;
@@ -30,21 +29,6 @@ void recurr(vector<int> v,std::vector<int> v1,int idx){
 
   recurr(v,v1,idx+1);
 }
-
-set<int> make(int x){
-  set<int> s;
-  for(int i=1;i<=x;i++) s.insert(i);
-  return s;
-}
-
-void fill(){
-  set<int> s=make(5);
-  // filling 1st row
-  s.erase(mat[0][0]);
-  vector<vector<int>> matrix(5,vector<int>(5));
-
-}
-
 
 int main(){
   int t;
@@ -133,13 +117,9 @@ int main(){
       //   cout<<v4.size()<<endl;
       // }
       // for(int i=0;i<v4.size();i++){
-        // for(int kx=0;kx<5;kx++) for(int ky=0;ky<5;ky++) mat[kx][ky]=0;
-        // for(int j=0;j<v4[i].size();j++) mat[j][j]=v4[i][j];
-        // if(fill()) break;
         // for(int j=0;j<v4[i].size();j++) cout<<v4[i][j]<<" ";
         // cout<<endl;
       // }
-
     }
 
     int mat[5][5];
@@ -192,21 +172,18 @@ int main(){
         flag=1;
         int st=0;
         vector<vector<int>> x={{5,1,3,4,2},{3,5,2,1,4},{4,3,5,2,1},{2,4,1,3,5},{1,2,4,5,3}};
-        // if(k==17) st=2;
         rep(i,0,n) rep(j,0,n) mat[i][j]= x[i][(st+j)%5];
       }
       else if(k==22){
         flag=1;
         int st=0;
         vector<vector<int>> x={{4,1,5,3,2},{5,4,2,1,3},{3,5,4,2,1},{2,3,1,5,4},{1,2,3,4,5}};
-        // if(k==17) st=2;
         rep(i,0,n) rep(j,0,n) mat[i][j]= x[i][(st+j)%5];
       }
       else if(k==8){
         flag=1;
         int st=0;
         vector<vector<int>> x={{1,2,3,4,5},{2,1,4,5,3},{3,5,1,2,4},{5,4,2,3,1},{4,3,5,1,2}};
-        // if(k==17) st=2;
         rep(i,0,n) rep(j,0,n) mat[i][j]= x[i][(st+j)%5];
       }
     }
